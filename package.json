@@ -11,17 +11,25 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.51.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
     "clsx": "^2.1.1",
+    "ethers": "^5.8.0",
+    "jsqr": "^1.4.0",
     "lucide-react": "^0.424.0",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.2",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5",
     "viem": "^2.13.7",
     "wagmi": "^2.12.16",
-    "zustand": "^4.5.2",
-    "jsqr": "^1.4.0"
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
     "@types/node": "^20.14.12",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
@@ -34,4 +42,3 @@
     "vite-plugin-pwa": "^0.20.5"
   }
 }
-

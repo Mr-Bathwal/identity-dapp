@@ -110,8 +110,8 @@ async function startScan() {
   }, [])
 
   async function submit() {
-    if (!address) return alert('Set UserIdentityRegistry address in Settings')
-    if (!qrText) return alert('Scan or upload Aadhaar QR first')
+    if (!address) { alert('Set UserIdentityRegistry address in Settings'); (window as any).openChatWithPrompt?.('Need help setting contract addresses?'); return }
+    if (!qrText) { alert('Scan or upload Aadhaar QR first'); (window as any).openChatWithPrompt?.('Having trouble scanning the QR? Try better lighting or upload a photo.'); return }
     const h = await sha256Hex(qrText)
     const proofHex = toHexString(new TextEncoder().encode(qrText))
     await writeContractAsync({

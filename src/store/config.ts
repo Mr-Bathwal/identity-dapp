@@ -27,13 +27,13 @@ export const useConfigStore = create<ConfigState>()(
     (set) => ({
       chainId: 11155111, // sepolia default
       addresses: {
-        UserIdentityRegistry: '0x0545f18C6F76ed2dCb6E0037D4aAc67F89cF166f' as Address,
-        CertificateManager: '0xf89cdAc39eb5deA30216Dcab7a3c5d4C32581F38' as Address,
-        OrganizationRegistry: '0x7040B4b606C819663a7530c7e1B37bC02de2AdB6' as Address,
-        GlobalCredentialAnchor: '0xc19490dA04e143b390f63799cfC7D1df282384A1' as Address,
-        CrossChainManager: '0xc2A8577BD15679868285737C968C622f351ec7cd' as Address,
-        RecognitionManager: '0x5B94b8F67561fe1e0B85557D9D1c45c11251778e' as Address,
-        VerificationLogger: '0x49BFE3ff46C52857b3dAb20B85F2742F7b017d45' as Address,
+        UserIdentityRegistry: '0x9754F529b2c4Acd30f3830d4198aE210667ed411' as Address,
+        CertificateManager: '0x131ec26d5Cb482eE8155e2df7bB244c2586AADC6' as Address,
+        OrganizationRegistry: '0xBCDa4D0464509228BBD983864DfE12D2ddCA3E04' as Address,
+        GlobalCredentialAnchor: '0x4688ad554cdd5dD5be4F7e0aA62c87122E06ef7c' as Address,
+        CrossChainManager: '0xA225572131580227aE68e784251C28e7371ABA83' as Address,
+        RecognitionManager: '0x04FC417B7729935bee1eD410B7a0E5EfB1A0928f' as Address,
+        VerificationLogger: '0x2F257E2f78FDF76Fc156E16b17E62e0357a5Cec1' as Address,
       },
       setAddress: (key, addr) =>
         set((s) => ({ addresses: { ...s.addresses, [key]: addr as Address } })),

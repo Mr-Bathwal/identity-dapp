@@ -22,6 +22,18 @@ export default defineConfig({
       }
     })
   ],
+  define: {
+    global: 'globalThis',
+    'process.env': {}
+  },
+  resolve: {
+    alias: {
+      buffer: 'buffer'
+    }
+  },
+  optimizeDeps: {
+    include: ['buffer']
+  },
   server: {
     port: 5173
   }

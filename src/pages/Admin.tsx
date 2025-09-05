@@ -4,7 +4,20 @@ import { useConfigStore } from '../store/config'
 
 import CardButton from '../components/CardButton'
 
+import { useIsAdmin } from '../hooks/useIsAdmin'
+
 export default function Admin() {
+  const { isAdmin } = useIsAdmin()
+  if (!isAdmin) {
+    return (
+      <div className="glass p-4 rounded-lg border border-white/10">
+        <div className="text-lg font-semibold mb-2">Access Denied</div>
+        <div className="text-sm">This area is restricted to authorized administrators. If you believe this is a mistake, please contact your administrator.
+          <button className="ml-2 underline" onClick={()=>window.dispatchEvent(new CustomEvent('open-chat',{detail:{message:'I need admin access help'}}))}>Talk to assistant</button>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="space-y-6">
       <section className="relative overflow-hidden rounded-xl">
